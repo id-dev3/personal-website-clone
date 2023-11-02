@@ -3,3 +3,22 @@
 @use 'globals/reset';
 @use 'globals/typography';
 
+header{
+    .navbar-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 3rem;
+
+        .logo{
+            a{
+                img{
+                    width: 120px;
+                }
+            }
+        }
+
+
+        
+    }
+}
