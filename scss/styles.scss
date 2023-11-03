@@ -3,7 +3,11 @@
 @use 'globals/reset';
 @use 'globals/typography';
 
+            /// HEADER SECTION ///
+
 header{
+
+    // NAVBAR SECTION //
     .navbar-container{
         display: flex;
         justify-content: space-between;
@@ -48,6 +52,7 @@ header{
         }
     }
 
+    // HERO SECTION //
     .hero-section{
         height: 100vh;
         background-image: url("/assets/images/background-image.jpg");
@@ -120,5 +125,20 @@ header{
             }
         }
           
+    }
+}
+
+            /// MAIN SECTION ///
+
+main{
+    padding: 0 4rem;
+
+    .first-section{
+        .about-me{
+            font-weight: 600;
+            font-size: 2.5rem;
+            color: #0E76A8;
+            margin-bottom: 1.5rem;
+        }
     }
 }
