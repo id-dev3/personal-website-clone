@@ -12,7 +12,8 @@ header{
         position: sticky;
         top: 0;
         background-color: rgb(100% 100% 100% / .7);
-        backdrop-filter: blur(30px);
+        backdrop-filter: blur(25px);
+        z-index: 5;
 
         .logo{
             a{
@@ -45,5 +46,12 @@ header{
                 cursor: pointer;
             }
         }
+    }
+
+    .hero-section{
+        height: 100vh;
+        background-image: url("/assets/images/background-image.jpg");
+        background-size: cover;
+        position: relative;
     }
 }
