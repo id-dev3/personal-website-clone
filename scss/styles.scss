@@ -53,5 +53,72 @@ header{
         background-image: url("/assets/images/background-image.jpg");
         background-size: cover;
         position: relative;
+
+        .my-text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            .my-title{
+                color: #fff;
+                font-size: 4.5rem;
+                animation-name: flipInX;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+
+                @keyframes flipInX {
+                    0% {
+                      transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+                      opacity: 0;
+                    }
+                    40% {
+                      transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+                    }
+                    60% {
+                      transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+                      opacity: 1;
+                    }
+                    80% {
+                      transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+                    }
+                    100% {
+                      transform: perspective(400px);
+                    }
+                }
+            }
+
+            div{
+                .typewrite {
+                    color: #fff;
+                    background-color: #0e77a892;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    font-size: 1.563rem;
+                    font-weight: 600;
+                    display: table;
+                    margin: auto;
+                    padding: 0.438rem;
+                    letter-spacing: 0;
+                }
+            }
+        }
+
+        .skills-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 75%;
+            // height: 100vh;
+            margin: auto;
+            transform: translateY(460px);
+
+            .skill-icon {
+              margin: auto;
+              width: 40px;
+              opacity: 0.7;
+            }
+        }
+          
     }
 }
