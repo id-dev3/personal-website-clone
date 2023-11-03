@@ -8,7 +8,11 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1.5rem 3rem;
+        padding: 1rem 4rem;
+        position: sticky;
+        top: 0;
+        background-color: rgb(100% 100% 100% / .7);
+        backdrop-filter: blur(30px);
 
         .logo{
             a{
@@ -18,7 +22,28 @@ header{
             }
         }
 
+        .nav-links{
+            .links{
+                color: $main-color;
+                letter-spacing: -0.00675rem;
+                margin-left: 2rem;
 
+                &:hover{
+                    color: $blue-color;
+                }
+            }
+
+            .active{
+                color: $blue-color;
+                margin-left: 0;
+            }
+        }
         
+        .dark-light-mode{
+            #icon{
+                width: 35px;
+                cursor: pointer;
+            }
+        }
     }
 }

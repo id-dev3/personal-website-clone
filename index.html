@@ -8,10 +8,12 @@
 
     <title>Idrissa Diallo • Jr Frontend Developer</title>
 
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+
     <!---------- Google Fonts ---------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700;800&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-------- Font Awesome -------->
     <script src="https://kit.fontawesome.com/1b2a4a8051.js" crossorigin="anonymous"></script>
@@ -19,7 +21,7 @@
     <!-------- CSS File -------->
     <link rel="stylesheet" href="./dist/styles.css">
 </head>
-<body>
+<body data-theme="light">
 
     <header>
         <nav class="navbar-container">
@@ -30,17 +32,20 @@
             </div>
 
             <div class="nav-links">
-                <a class="links" href="" >Home</a>
+                <a class="links active" href="" >Home</a>
                 <a class="links" href="" >About</a>
                 <a class="links" href="" >Services</a>
                 <a class="links" href="" >Projects</a>
             </div>
 
             <div class="dark-light-mode">
-                <i class="fas fa-moon dark-mode-icon" aria-hidden="true"></i>
-                <i class="fas fa-sun light-mode-icon" aria-hidden="true"></i>
+                <img id="icon" src="./assets/images/moon.png" alt="moon icon">
             </div>
         </nav>
+
+        <div class="hero-section">
+            
+        </div>
     </header>
     
     <script src="./javascript/script.js"></script>
