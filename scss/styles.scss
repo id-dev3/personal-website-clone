@@ -9,15 +9,15 @@ header{
 
     // NAVBAR SECTION //
     .navbar-container{
-        display: flex;
+        @include flex-setup;
         justify-content: space-between;
-        align-items: center;
         padding: 1rem 4rem;
-        position: sticky;
+        position: fixed;
         top: 0;
+        width: 100%;
         background-color: rgb(100% 100% 100% / .7);
         backdrop-filter: blur(25px);
-        z-index: 5;
+        z-index: 10;
 
         .logo{
             a{
@@ -54,7 +54,7 @@ header{
 
     // HERO SECTION //
     .hero-section{
-        height: 100vh;
+        min-height: 100vh;
         background-image: url("/assets/images/background-image.jpg");
         background-size: cover;
         position: relative;
@@ -110,11 +110,9 @@ header{
         }
 
         .skills-container {
-            display: flex;
-            align-items: center;
+            @include flex-setup;
             justify-content: center;
             width: 75%;
-            // height: 100vh;
             margin: auto;
             transform: translateY(460px);
 
@@ -124,7 +122,6 @@ header{
               opacity: 0.7;
             }
         }
-          
     }
 }
 
@@ -138,16 +135,11 @@ main{
         margin-bottom: 2rem;
 
         .about-me{
-            font-weight: 700;
-            font-size: 2.5rem;
-            color: $blue-color;
-            text-align: center;
-            margin: 2rem 0;
+            @include h2-setup;
         }
 
         .container-first-section{
-            display: flex;
-            align-items: center;
+            @include flex-setup;
             gap: 0 25px;
 
             .about-img{
@@ -168,10 +160,6 @@ main{
                     margin-bottom: .8rem;
                     line-height: 1.6;
                     letter-spacing: 0.02em;
-                    // display: -webkit-box;
-                    // -webkit-line-clamp: 3;
-                    // -webkit-box-orient: vertical;
-                    // overflow: hidden;
                 }
 
                 .text-1{
@@ -240,6 +228,118 @@ main{
                     font-weight: bold;
                     letter-spacing: 0.5px;
                     margin-top: 1.8rem;
+                }
+            }
+        }
+    }
+
+    // SECOND SECTION //
+    .second-section{
+        margin-bottom: 3rem;
+
+        .services{
+            @include h2-setup;
+        }
+
+        .container-3{
+            position: relative;
+            @include flex-setup-2;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            .serviceBox{
+                position: relative;
+                width: 350px;
+                height: 280px;
+                background: $main-color;
+                border-radius: 20px;
+                overflow: hidden;
+
+                &:hover{
+                    .icon{
+                        top: 30px;
+                        left: calc(50% - 40px);
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        transition-delay: 0s;
+
+                        i{
+                            font-size: 2em;
+                            transition-delay: 0s;
+                        }
+                    }
+
+                    .content{
+                        transform: scale(1);
+                        transition-delay: 0.25s;
+                    }
+                }
+
+                .icon{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: var(--i);
+                    transition: .5s;
+                    @include flex-setup-2;
+                    z-index: 2;
+                    transition-delay: .25s;
+
+                    i{
+                        font-size: 5em;
+                        color: #fff;
+                        transition: .5s;
+                        transition-delay: .25s;
+                    }
+                }
+
+                .icon-1{
+                    --i: #2b2d42;
+                }
+                    
+                .icon-2{
+                    --i: #4eb7ff;
+                }
+                
+                .icon-3{
+                    --i: #0077b6;
+                }
+                
+                .icon-4{
+                    --i: #43f390;
+                }
+                
+                .icon-5{
+                    --i: #001219;
+                }
+
+                .content{
+                    position: relative;
+                    padding: 1.25rem;
+                    color: #fff;
+                    text-align: center;
+                    margin-top: 6.25rem;
+                    z-index: 1;
+                    transform: scale(0);
+                    transition: .5s;
+                    transition-delay: 0s;
+
+                    .service-title{
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        margin-top: .625rem;
+                        margin-bottom: .5rem;
+                    }
+                        
+                    .service-paragraph{
+                        font-size: .9rem;
+                        font-weight: 400;
+                        line-height: 1.6;
+                        letter-spacing: .02em;
+                    }
                 }
             }
         }
