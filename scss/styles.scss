@@ -168,6 +168,10 @@ main{
                     margin-bottom: .8rem;
                     line-height: 1.6;
                     letter-spacing: 0.02em;
+                    // display: -webkit-box;
+                    // -webkit-line-clamp: 3;
+                    // -webkit-box-orient: vertical;
+                    // overflow: hidden;
                 }
 
                 .text-1{
