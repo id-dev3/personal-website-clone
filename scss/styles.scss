@@ -344,4 +344,160 @@ main{
             }
         }
     }
+
+    // THIRS-SECTION //
+    .third-section{
+        margin-bottom: 3rem;
+        
+        .projects{
+            @include h2-setup;
+        }
+
+        .third-container{
+            @include flex-setup-2;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .card{
+                width: 350px;
+                height: 450px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                overflow: hidden;
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+                }
+              
+                .card-image {
+                    height: 200px;
+                    object-fit: cover;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+                
+                .card-content {
+                    padding: 20px;
+
+                    .card-title {
+                        margin: 0;
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        color: $blue-color;
+                    }
+                    
+                    .card-description {
+                        span{
+                            color: $blue-color;
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                            margin-right: .5rem;
+                        }
+
+                        margin: .9rem 0;
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: $secondary-color;
+                        line-height: 1.5;
+                    }
+                    
+                    .card-button{
+                        button{
+                            position: relative;
+                            display: inline-block;
+                            cursor: pointer;
+                            outline: none;
+                            border: 0;
+                            vertical-align: middle;
+                            text-decoration: none;
+                            background: transparent;
+                            padding: 0;
+                            font-size: inherit;
+                            font-family: inherit;
+                        
+                            &:hover {
+                                .circle {
+                                    width: 100%;
+                                }
+                    
+                                .icon.arrow {
+                                    background: #fff;
+                                    transform: translate(1.2rem, 0);
+                                }
+                    
+                                .button-text {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        
+                        .learn-more{
+                            width: 10rem;
+                            height: auto;
+                    
+                            .circle{
+                                transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+                                position: relative;
+                                display: block;
+                                margin: 0;
+                                width: 2.6rem;
+                                height: 2.6rem;
+                                background: $main-color;
+                                border-radius: 1.3rem;
+                    
+                                .icon{
+                                    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    background: #fff;
+                                }
+                    
+                                .arrow{
+                                    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+                                    left: 0.445rem;
+                                    width: 1.105rem;
+                                    height: 0.125rem;
+                                    background: none;
+                    
+                                    &::before{
+                                        position: absolute;
+                                        content: "";
+                                        top: -0.25rem;
+                                        right: 0.0625rem;
+                                        width: 0.625rem;
+                                        height: 0.625rem;
+                                        border-top: 0.125rem solid #fff;
+                                        border-right: 0.125rem solid #fff;
+                                        transform: rotate(45deg);
+                                    }
+                                }
+                            }
+                    
+                            .button-text {
+                                transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                padding: .45rem 0 .5rem 0;
+                                margin: 0 0 0 1.85rem;
+                                color: $main-color;
+                                font-weight: 700;
+                                line-height: 1.6;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }  
+    }
 }
