@@ -60,10 +60,7 @@ header{
         position: relative;
 
         .my-text{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            @include position-setup;
 
             .my-title{
                 color: #fff;
@@ -173,51 +170,51 @@ main{
                     background: none;
                   
                     &:before{
-                      content: "";
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      display: block;
-                      border-radius: 3.125rem;
-                      background: #b1dae7;
-                      width: 45px;
-                      height: 45px;
-                      transition: all 0.3s ease;
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        border-radius: 3.125rem;
+                        background: #b1dae7;
+                        width: 45px;
+                        height: 45px;
+                        transition: all 0.3s ease;
                     }
                   
                     span{
-                      position: relative;
-                      font-weight: 700;
-                      letter-spacing: 0.05em;
-                      color: $blue-color;
+                        position: relative;
+                        font-weight: 700;
+                        letter-spacing: 0.05em;
+                        color: $blue-color;
                     }
                   
                     svg{
-                      position: relative;
-                      top: 0;
-                      margin-left: .625rem;
-                      fill: none;
-                      stroke-linecap: round;
-                      stroke-linejoin: round;
-                      stroke: $blue-color;
-                      stroke-width: 2;
-                      transform: translateX(-5px);
-                      transition: all 0.3s ease;
+                        position: relative;
+                        top: 0;
+                        margin-left: .625rem;
+                        fill: none;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                        stroke: $blue-color;
+                        stroke-width: 2;
+                        transform: translateX(-5px);
+                        transition: all 0.3s ease;
                     }
                   
                     &:hover{
-                      &:before{
-                        width: 100%;
-                        background: #b1dae7;
-                      }
-                  
-                      svg{
-                        transform: translateX(0);
-                      }
+                        &:before{
+                            width: 100%;
+                            background: #b1dae7;
+                        }
+                    
+                        svg{
+                            transform: translateX(0);
+                        }
                     }
                   
                     &:active{
-                      transform: scale(0.95);
+                        transform: scale(0.95);
                     }
                 }
                   
@@ -392,18 +389,18 @@ main{
                     }
                     
                     .card-description {
+                        margin: .9rem 0;
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: $secondary-color;
+                        line-height: 1.5;
+
                         span{
                             color: $blue-color;
                             font-size: 1.1rem;
                             font-weight: 600;
                             margin-right: .5rem;
                         }
-
-                        margin: .9rem 0;
-                        font-size: 1rem;
-                        font-weight: 500;
-                        color: $secondary-color;
-                        line-height: 1.5;
                     }
                     
                     .card-button{
