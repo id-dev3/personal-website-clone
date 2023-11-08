@@ -97,7 +97,7 @@ header{
                 .typewrite {
                     color: #fff;
                     background-color: #0e77a892;
-                    border-radius: 10px;
+                    border-radius: .625rem;
                     text-decoration: none;
                     font-size: 1.563rem;
                     font-weight: 600;
@@ -110,15 +110,14 @@ header{
         }
 
         .skills-container {
-            @include flex-setup;
-            justify-content: center;
+            @include flex-setup-2;
             width: 75%;
             margin: auto;
             transform: translateY(460px);
 
             .skill-icon {
               margin: auto;
-              width: 40px;
+              width: 36px;
               opacity: 0.7;
             }
         }
@@ -179,7 +178,7 @@ main{
                       top: 0;
                       left: 0;
                       display: block;
-                      border-radius: 50px;
+                      border-radius: 3.125rem;
                       background: #b1dae7;
                       width: 45px;
                       height: 45px;
@@ -196,7 +195,7 @@ main{
                     svg{
                       position: relative;
                       top: 0;
-                      margin-left: 10px;
+                      margin-left: .625rem;
                       fill: none;
                       stroke-linecap: round;
                       stroke-linejoin: round;
@@ -252,7 +251,7 @@ main{
                 width: 350px;
                 height: 280px;
                 background: $main-color;
-                border-radius: 20px;
+                border-radius: 1.25rem;
                 overflow: hidden;
 
                 &:hover{
@@ -363,7 +362,7 @@ main{
                 height: 450px;
                 background: #fff;
                 border: 1px solid #ccc;
-                border-radius: 10px;
+                border-radius: .625rem;
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                 overflow: hidden;
                 transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -383,7 +382,7 @@ main{
                 }
                 
                 .card-content {
-                    padding: 20px;
+                    padding: 1.25rem;
 
                     .card-title {
                         margin: 0;
@@ -509,34 +508,35 @@ main{
         .wrapper{
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
 
             .icon{
                 position: relative;
                 background: #ffffff;
                 color: $main-color;
                 border-radius: 50%;
-                padding: 15px;
-                margin: 10px;
+                padding: .938rem;
+                margin: .625rem;
                 width: 50px;
                 height: 50px;
-                font-size: 18px;
+                font-size: 1.125rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 .625rem .625rem rgba(0, 0, 0, 0.1);
                 cursor: pointer;
                 transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
                 .tooltip{
                     position: absolute;
                     top: 0;
-                    font-size: 14px;
+                    font-size: .875rem;
                     background: #ffffff;
                     color: #ffffff;
-                    padding: 5px 8px;
-                    border-radius: 5px;
-                    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                    padding: .313rem .5rem;
+                    border-radius: .313rem;
+                    box-shadow: 0 .625rem .625rem rgba(0, 0, 0, 0.1);
                     opacity: 0;
                     pointer-events: none;
                     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -597,6 +597,21 @@ main{
                 background: $linkedin-color;
                 color: #ffffff;
             }
+        }
+    }
+}
+
+            /// MAIN SECTION ///
+footer{
+    .footer-section{
+        background: $main-color;
+        padding: 1.5rem 0;
+
+        p{
+            color: #fff;
+            font-size: .9rem;
+            font-weight: 600;
+            text-align: center;
         }
     }
 }
