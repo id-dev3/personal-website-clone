@@ -60,3 +60,21 @@ window.addEventListener("DOMContentLoaded", () => {
 });
   
 // END TYPE EFFECT
+
+// START DARK MODE //
+
+let icon = document.getElementById("icon");
+let white = document.getElementById("white");
+
+icon.onclick = function() {
+  document.body.classList.toggle("dark-theme");
+  if(document.body.classList.contains("dark-theme")){
+    icon.src = "./assets/images/light-sun.svg";
+    white.src = "./assets/images/my-logo-white.png";
+  } else{
+    icon.src = "./assets/images/moon.png";
+    white.src = "./assets/images/my-logo.png";
+  }
+}
+
+// END DARK MODE //

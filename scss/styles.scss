@@ -5,6 +5,39 @@
 
             /// HEADER SECTION ///
 
+$main-color: #343a40;
+$white-color: #fff;
+
+.dark-theme {
+    background: $main-color;
+
+    header{
+        .hero-section{
+            @include dark-mode-hero;
+        }
+        
+        .navbar-container{
+            background-color: rgba(64, 64, 64, 0.1);
+
+            @include dark-mode-nav;
+        }
+    }
+
+    main{
+        .first-section{
+            @include dark-mode-first;
+        }
+        .second-section{
+            @include dark-mode-second;
+        }
+        .third-section{
+            .projects{
+                @include h2-color;
+            }
+        }
+    }
+}
+
 header{
 
     // NAVBAR SECTION //
@@ -63,7 +96,7 @@ header{
             @include position-setup;
 
             .my-title{
-                color: #fff;
+                color: $white-color;
                 font-size: 4.5rem;
                 animation-name: flipInX;
                 animation-duration: 2s;
@@ -92,7 +125,7 @@ header{
 
             div{
                 .typewrite {
-                    color: #fff;
+                    color: $white-color;
                     background-color: #0e77a892;
                     border-radius: .625rem;
                     text-decoration: none;
@@ -125,6 +158,8 @@ header{
 
 main{
     padding: 0 4rem;
+
+    
 
     // FIRST SECTION //
     .first-section{
@@ -286,7 +321,7 @@ main{
 
                     i{
                         font-size: 5em;
-                        color: #fff;
+                        color: $white-color;
                         transition: .5s;
                         transition-delay: .25s;
                     }
@@ -315,7 +350,7 @@ main{
                 .content{
                     position: relative;
                     padding: 1.25rem;
-                    color: #fff;
+                    color: $white-color;
                     text-align: center;
                     margin-top: 6.25rem;
                     z-index: 1;
@@ -357,7 +392,7 @@ main{
             .card{
                 width: 350px;
                 height: 450px;
-                background: #fff;
+                background: $white-color;
                 border: 1px solid #ccc;
                 border-radius: .625rem;
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -392,7 +427,7 @@ main{
                         margin: .9rem 0;
                         font-size: 1rem;
                         font-weight: 500;
-                        color: $secondary-color;
+                        color: $main-color;
                         line-height: 1.5;
 
                         span{
@@ -423,12 +458,12 @@ main{
                                 }
                     
                                 .icon.arrow {
-                                    background: #fff;
+                                    background: $white-color;
                                     transform: translate(1.2rem, 0);
                                 }
                     
                                 .button-text {
-                                    color: #fff;
+                                    color: $white-color;
                                 }
                             }
                         }
@@ -453,7 +488,7 @@ main{
                                     top: 0;
                                     bottom: 0;
                                     margin: auto;
-                                    background: #fff;
+                                    background: $white-color;
                                 }
                     
                                 .arrow{
@@ -470,8 +505,8 @@ main{
                                         right: 0.0625rem;
                                         width: 0.625rem;
                                         height: 0.625rem;
-                                        border-top: 0.125rem solid #fff;
-                                        border-right: 0.125rem solid #fff;
+                                        border-top: 0.125rem solid $white-color;
+                                        border-right: 0.125rem solid $white-color;
                                         transform: rotate(45deg);
                                     }
                                 }
@@ -509,7 +544,7 @@ main{
 
             .icon{
                 position: relative;
-                background: #ffffff;
+                background: $white-color;
                 color: $main-color;
                 border-radius: 50%;
                 padding: .938rem;
@@ -529,8 +564,8 @@ main{
                     position: absolute;
                     top: 0;
                     font-size: .875rem;
-                    background: #ffffff;
-                    color: #ffffff;
+                    background: $white-color;
+                    color: $white-color;
                     padding: .313rem .5rem;
                     border-radius: .313rem;
                     box-shadow: 0 .625rem .625rem rgba(0, 0, 0, 0.1);
@@ -543,7 +578,7 @@ main{
                         content: "";
                         height: 8px;
                         width: 8px;
-                        background: #ffffff;
+                        background: $white-color;
                         bottom: -3px;
                         left: 50%;
                         transform: translate(-50%) rotate(45deg);
@@ -567,32 +602,32 @@ main{
 
             .facebook:hover, .facebook:hover .tooltip, .facebook:hover .tooltip::before{
                 background: $facebook-color;
-                color: #ffffff;
+                color: $white-color;
             }
 
             .twitter:hover, .twitter:hover .tooltip, .twitter:hover .tooltip::before{
                 background: $twitter-color;
-                color: #ffffff;
+                color: $white-color;
             }
 
             .instagram:hover, .instagram:hover .tooltip, .instagram:hover .tooltip::before{
                 background: $instagram-color;
-                color: #ffffff;
+                color: $white-color;
             }
 
             .github:hover, .github:hover .tooltip, .github:hover .tooltip::before{
                 background: $github-color;
-                color: #ffffff;
+                color: $white-color;
             }
 
             .gmail:hover, .gmail:hover .tooltip, .gmail:hover .tooltip::before{
                 background: $gmail-color;
-                color: #ffffff;
+                color: $white-color;
             }
 
             .linkedin:hover, .linkedin:hover .tooltip, .linkedin:hover .tooltip::before{
                 background: $linkedin-color;
-                color: #ffffff;
+                color: $white-color;
             }
         }
     }
@@ -605,7 +640,7 @@ footer{
         padding: 1.5rem 0;
 
         p{
-            color: #fff;
+            color: $white-color;
             font-size: .9rem;
             font-weight: 600;
             text-align: center;
