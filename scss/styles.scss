@@ -163,6 +163,31 @@ header{
                 display: none;
             }
         }
+
+        .hero-section{
+            background-position: center;
+
+            .my-text{
+                width: 100%;
+                margin-bottom: 2rem;
+
+                .my-title{
+                    font-size: 3rem;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+
+                div{
+                    .typewrite{
+                        font-size: 1.35rem;
+                    }
+                }
+            }
+
+            .skills-container{
+                display: none;
+            }
+        }
     }
 }
 
