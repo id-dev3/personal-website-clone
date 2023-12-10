@@ -30,6 +30,7 @@
     color: #4eb7ff;
 }
 
+// DARK MODE //
 @mixin dark-mode-nav{
     .nav-links{
         .links{
@@ -95,3 +96,12 @@
         }
     }
 }
+
+// END DARK MODE //
+
+// MEDIA QUERIES //
+@mixin mobile-view{
+    @media only screen and (max-width: 600px){
+      @content;
+    }
+  }

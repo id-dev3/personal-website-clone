@@ -154,6 +154,12 @@ header{
     }
 }
 
+@include mobile-view{
+    header{
+        
+    }
+}
+
             /// MAIN SECTION ///
 
 main{
