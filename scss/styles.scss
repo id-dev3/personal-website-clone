@@ -668,6 +668,27 @@ main{
     }
 }
 
+@include mobile-view{
+    main{
+        padding: 0 1.3rem;
+
+        .first-section{
+            .about-me{
+                font-size: 2rem;
+                margin: 2rem 0;
+            }
+
+            .container-first-section{
+                flex-direction: column;
+
+                .about-img{
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
             /// MAIN SECTION ///
 footer{
     .footer-section{
