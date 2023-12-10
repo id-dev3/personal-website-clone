@@ -156,7 +156,13 @@ header{
 
 @include mobile-view{
     header{
-        
+        .navbar-container{
+            padding: 1.25rem 1.3rem;
+
+            .nav-links{
+                display: none;
+            }
+        }
     }
 }
 
@@ -164,8 +170,6 @@ header{
 
 main{
     padding: 0 4rem;
-
-    
 
     // FIRST SECTION //
     .first-section{
