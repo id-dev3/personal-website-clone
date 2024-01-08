@@ -191,6 +191,34 @@ header{
     }
 }
 
+@include tablet-view{
+    header{
+        .navbar-container{
+            padding: 1rem 2rem;
+        }
+
+        .hero-section{
+            background-position: center;
+
+            .my-text{
+
+                .my-title{
+                    font-size: 4rem;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .skills-container{
+                transform: translateY(640px);
+
+                .skill-icon{
+                    width: 46px;
+                }
+            }
+        }
+    }
+}
+
             /// MAIN SECTION ///
 
 main{
