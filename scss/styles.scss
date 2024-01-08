@@ -90,10 +90,13 @@ header{
         min-height: 100vh;
         background-image: url("/assets/images/background-image.jpg");
         background-size: cover;
+        background-position-x: center;
         position: relative;
 
         .my-text{
             @include position-setup;
+            width: 100%;
+            text-align: center;
 
             .my-title{
                 color: $white-color;
@@ -143,11 +146,12 @@ header{
             @include flex-setup-2;
             width: 75%;
             margin: auto;
-            transform: translateY(460px);
+            @include position-setup;
+            transform: translate(-50%, 200%);
 
             .skill-icon {
               margin: auto;
-              width: 36px;
+              width: 40px;
               opacity: 0.7;
             }
         }
@@ -165,15 +169,9 @@ header{
         }
 
         .hero-section{
-            background-position: center;
-
             .my-text{
-                width: 100%;
-                margin-bottom: 2rem;
-
                 .my-title{
                     font-size: 3rem;
-                    text-align: center;
                     margin-bottom: 1rem;
                 }
 
@@ -185,7 +183,11 @@ header{
             }
 
             .skills-container{
-                display: none;
+                width: 90%;
+
+                .skill-icon{
+                    width: 32px;
+                }
             }
         }
     }
@@ -198,10 +200,7 @@ header{
         }
 
         .hero-section{
-            background-position: center;
-
             .my-text{
-
                 .my-title{
                     font-size: 4rem;
                     margin-bottom: 1rem;
@@ -209,10 +208,28 @@ header{
             }
 
             .skills-container{
-                transform: translateY(640px);
+                width: 90%;
 
                 .skill-icon{
-                    width: 46px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+}
+
+@include laptop-view{
+    header{
+        .navbar-container{
+            padding: 1.2rem 1.5rem;
+        }
+
+        .hero-section{
+            .skills-container{
+                width: 90%;
+
+                .skill-icon{
+                    width: 40px;
                 }
             }
         }
@@ -728,22 +745,25 @@ main{
             }
 
             .container-first-section{
-                flex-direction: column;
-                text-align: center;
-
-                .about-img{
-                    margin-bottom: 1.5rem;
-
-                    img{
-                        width: 100%;
-                    }
-                }
+                @include container-first-section-setup;
             }
         }
     }
 }
 
-            /// MAIN SECTION ///
+@include laptop-view{
+    main{
+        padding: 0 1.5rem;
+
+        .first-section{
+            .container-first-section{
+                @include container-first-section-setup;
+            }
+        }
+    }
+}
+
+            /// FOOTER SECTION ///
 footer{
     .footer-section{
         background: $main-color;
