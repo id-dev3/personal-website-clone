@@ -321,7 +321,7 @@ main{
                 border-radius: 1.25rem;
                 overflow: hidden;
 
-                &:hover{
+                &:hover, &.active{
                     .icon{
                         top: 30px;
                         left: calc(50% - 40px);

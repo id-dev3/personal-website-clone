@@ -61,6 +61,28 @@ window.addEventListener("DOMContentLoaded", () => {
   
 // END TYPE EFFECT
 
+
+// FIXING MOBILE HOVER DELAY
+
+document.addEventListener('DOMContentLoaded', function () {
+  let serviceBoxes = document.querySelectorAll('.container-3 .serviceBox');
+
+  serviceBoxes.forEach(function (box) {
+    box.addEventListener('click', function () {
+      serviceBoxes.forEach(function (otherBox) {
+        if (otherBox !== box) {
+          otherBox.classList.remove('active');
+        }
+      });
+
+      box.classList.toggle('active');
+    });
+  });
+});
+
+// END FIXING MOBILE HOVER DELAY
+
+
 // START DARK MODE //
 
 let icon = document.getElementById("icon");
