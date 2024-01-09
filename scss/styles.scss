@@ -731,6 +731,20 @@ main{
                 }
             }
         }
+
+        .second-section{
+            .services{
+                font-size: 2rem;
+                margin: 2rem 0;
+            }
+        }
+
+        .third-section{
+            .projects{
+                font-size: 2rem;
+                margin: 2rem 0;
+            }
+        }
     }
 }
 
@@ -739,11 +753,6 @@ main{
         padding: 0 1rem;
 
         .first-section{
-            .about-me{
-                font-size: 2.25rem;
-                margin: 2rem 0;
-            }
-
             .container-first-section{
                 @include container-first-section-setup;
             }
